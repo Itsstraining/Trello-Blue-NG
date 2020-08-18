@@ -1,0 +1,19 @@
+<!-- <div class="container"> -->
+<!-- <div *ngIf="dashDB.length ==  0"> -->
+
+<!-- </div> -->
+
+
+<div>
+    <input type="text" [(ngModel)]="boxname">
+    <button (click)="newBox()">asdas</button>
+</div>
+<div class="dboard container">
+
+    <p class="add-box box1" *ngFor="let item of dbtam">{{item.noidung}}</p>
+    <app-dash-box-item></app-dash-box-item>
+</div>
+
+
+
+<!-- <button (click)="check()">chekc</button> -->

@@ -1,0 +1,14 @@
+<div *ngIf="display1" (click)="clearVaulue()" class="point add-tag">
+    <mat-icon aria-hidden="false" aria-label="Example home icon">add</mat-icon>
+    <span>Add another task</span>
+</div>
+
+<div *ngIf="display2" class="add-box box2">
+    <textarea placeholder="Write your task here" [(ngModel)]="txtBox"></textarea>
+    <div class="add-box box1" style="box-shadow: none;padding: 10px 0px;">
+        <button (click)="outputContent()" class="point btn">Add task</button>
+        <mat-icon class="point" (click)="toggle()" aria-hidden=" false " aria-label="Example home icon ">clear</mat-icon>
+    </div>
+</div>
+
+<!-- <p>{{txtBox}}</p> -->
