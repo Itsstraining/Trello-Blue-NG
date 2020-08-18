@@ -4,15 +4,19 @@
 <!-- </div> -->
 
 
-<div>
-    <input type="text" [(ngModel)]="boxname">
-    <button (click)="newBox()">asdas</button>
-</div>
-<div class="dboard container">
+<!-- <div> -->
+<!-- <input type="text" [(ngModel)]="boxname"> -->
+<!-- <button (click)="newBox()">asdas</button> -->
+<!-- </div>
+ -->
+<!-- <div *ngFor="let it of dashDB"> -->
+<!-- <p>{{it.boxName}}</p> -->
+<!-- <div class="dboard container"> -->
+<p class="add-box box1" *ngFor="let item of dbtam">{{item.noidung}}</p>
+<app-dash-box-item (onAddEvent)="pushdtb($event)"></app-dash-box-item>
+<!-- </div> -->
+<!-- </div> -->
 
-    <p class="add-box box1" *ngFor="let item of dbtam">{{item.noidung}}</p>
-    <app-dash-box-item></app-dash-box-item>
-</div>
 
 
 

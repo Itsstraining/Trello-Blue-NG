@@ -1,0 +1,11 @@
+<div>
+    <div *ngFor="let it of dashDB">
+        <p>{{it.boxName}}</p>
+        <app-dash-box></app-dash-box>
+    </div>
+</div>
+
+<div>
+    <input type="text" [(ngModel)]="dboxName">
+    <button (click)="newBox()">asdas</button>
+</div>

@@ -4,5 +4,5 @@ export interface DashListItem {
 
 export interface DashBox{
     boxName :string,
-    dashBox: Array<DashListItem>;
+    dashBox:Array <DashListItem>;
 }

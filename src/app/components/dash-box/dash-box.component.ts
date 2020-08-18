@@ -9,19 +9,21 @@ import {DashListItem, DashBox} from '../../models/dash-item.model'
 export class DashBoxComponent implements OnInit {
   boxname ='';
   public dbtam : Array<DashListItem> = [];
-  public dashDB :Array<DashBox> =[]
-  constructor(public dboardService : DashBoardServicesService) { 
-    this.dbtam = this.dboardService.db;
-    this.dashDB = this.dboardService.dashBoxDB;
+  // public dashDB :Array<DashBox> =[]
+  // constructor(public dboardService : DashBoardServicesService) { 
+  //   this.dashDB = this.dboardService.dashBoxDB;
+  // }
+  pushdtb(n:string){
+    this.dbtam.push({noidung:n});
   }
 
   ngOnInit(): void {
   }
-  newBox(){
-    this.dboardService.dashBoxDB.push({
-      boxName:this.boxname,
-      dashBox:this.dbtam,
-    });
-    console.log(this.dboardService.dashBoxDB);
-  }
+  // newBox(){
+  //   this.dboardService.dashBoxDB.push({
+  //     boxName:this.boxname,
+  //     dashBox:this.dbtam,
+  //   });
+  //   console.log(this.dboardService.dashBoxDB);
+  // }
 }
