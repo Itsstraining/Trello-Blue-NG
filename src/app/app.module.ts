@@ -1,3 +1,5 @@
+import { ComponentsModule } from './components/components.module';
+import { CommonModule } from '@angular/common';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
@@ -7,7 +9,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { UiModule } from './modules/ui/ui.module';
 import { Navbar1Component } from './navbar1/navbar1.component';
 import { HomeComponent } from './home/home.component';
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -18,7 +19,8 @@ import { HomeComponent } from './home/home.component';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    UiModule
+    UiModule,
+    ComponentsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
