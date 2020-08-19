@@ -79,7 +79,7 @@ const MarterialIU=[
   declarations: [],
   imports: [
     CommonModule,
-    MarterialIU,
+    MarterialIU
   ],
   exports: [MarterialIU]
 })
