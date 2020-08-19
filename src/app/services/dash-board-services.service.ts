@@ -5,7 +5,6 @@ import {DashListItem, DashBox} from '../models/dash-item.model'
   providedIn: 'root'
 })
 export class DashBoardServicesService {
-  db : Array<DashListItem>=[];
   dashBoxDB : Array<DashBox> =[];
   constructor() { }
 }

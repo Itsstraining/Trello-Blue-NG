@@ -1,6 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { DashBoardServicesService } from 'src/app/services/dash-board-services.service';
-
+import{DashListItem} from '../../models/dash-item.model';
 @Component({
   selector: 'app-dash-box-item',
   templateUrl: './dash-box-item.component.html',
@@ -17,12 +17,12 @@ export class DashBoxItemComponent implements OnInit {
 
   toggle(){
     this.display1 = !this.display1;
-    this.display2 = !this.display1;
+    this.display2 = !this.display2;
   }
-
-  outputContent(){
+  @Output() onAddEvent = new EventEmitter<string>();
+  outputContent(n:string){
     this.toggle();
-    this.dboardServiec.db.push({noidung:this.txtBox})
+    this.onAddEvent.emit(n);
   }
 
   clearVaulue(){
