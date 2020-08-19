@@ -10,6 +10,7 @@ import {DashListItem, DashBox} from '../../models/dash-item.model'
 })
 export class DashPageComponent implements OnInit {
   dboxName = '';
+  toggleIpt =true;
   public dashDB :Array<DashBox> =[]
   constructor(public dboardService : DashBoardServicesService) { 
     this.dashDB = this.dboardService.dashBoxDB;
@@ -17,11 +18,20 @@ export class DashPageComponent implements OnInit {
   ngOnInit(): void {
   }
   newBox(){
-    this.dboardService.dashBoxDB.push({
+    if (this.dboxName=='')
+      alert("Please enter your task name.")
+    else{  
+      this.toggle();
+      this.dboardService.dashBoxDB.push({
       boxName:this.dboxName,
       dashBox:[],
     });
-    console.log(this.dboardService.dashBoxDB);
+  }
+    this.dboxName='';
+  }
+
+  toggle(){
+    this.toggleIpt= !this.toggleIpt
   }
 
 

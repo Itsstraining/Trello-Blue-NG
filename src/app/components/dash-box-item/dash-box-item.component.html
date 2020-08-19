@@ -4,9 +4,11 @@
 </div>
 
 <div *ngIf="display2" class="add-box box2">
+    <mat-icon class="point" (click)="toggle()" aria-hidden=" false " aria-label="Example home icon ">clear</mat-icon>
     <textarea placeholder="Write your task here" [(ngModel)]="txtBox"></textarea>
-    <div class="add-box box1" style="box-shadow: none;padding: 10px 0px;">
-        <button (click)="outputContent(txtBox)" class="point btn">Add task</button>
-        <mat-icon class="point" (click)="toggle()" aria-hidden=" false " aria-label="Example home icon ">clear</mat-icon>
+    <div class="add-box box1" style="box-shadow: none ; padding: 10px 0px;">
+        <button (click)="outputContent(txtBox)" mat-flat-button style="color:white;background-color: #52b1b1">Add a task detail</button>
+        <!-- <button (click)="outputContent(txtBox)" class="point btn">Add task</button> -->
+        <!-- <mat-icon class="point" (click)="toggle()" aria-hidden=" false " aria-label="Example home icon ">clear</mat-icon> -->
     </div>
 </div>
