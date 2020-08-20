@@ -1,0 +1,36 @@
+
+
+<p>
+  <mat-card *ngIf="authService.user==null" style="width: 26%; height: 50%; " class="my-card">
+      <mat-card-actions>
+          <form class="my-form">
+
+            <img src="https://cdn.iconscout.com/icon/free/png-256/list-484-1126444.png" alt=""  style="width: 100px;display: flex;height: 80px; justify-content: center; padding-left: 35%">
+            <br>
+            <mat-form-field style="display: flex;justify-content: center;" appearance="fill">
+              <mat-label>Nhập email</mat-label>
+              <input matInput [type]="hide ? 'password' : 'text'">
+
+            </mat-form-field>
+              <br>
+              <mat-form-field style="display: flex;justify-content: center;" appearance="fill">
+                <mat-label>Nhập mật khẩu</mat-label>
+                <input matInput [type]="hide ? 'password' : 'text'">
+                <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+                <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                </button>
+              </mat-form-field>
+              <br>
+
+              <mat-card-actions style="display: flex;justify-content: center;">
+                  <button mat-raised-button  (click)='this.authService.lgin()'
+                      aria-label="Sign-out" color="primary">Đăng nhập</button>
+              </mat-card-actions>
+              <br>
+
+
+          </form>
+      </mat-card-actions>
+
+  </mat-card>
+</p>

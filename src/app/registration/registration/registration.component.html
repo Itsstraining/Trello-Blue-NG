@@ -1,0 +1,41 @@
+<p>
+  <mat-card *ngIf="authService.user==null" class="my-card">
+      <mat-card-actions>
+          <form class="my-form">
+            <img src="https://cdn.iconscout.com/icon/free/png-256/list-484-1126444.png" alt="" style="width: 100px;display: flex;height: 80px; justify-content: center; padding-left: 46%" >
+            <br>
+            <mat-form-field style="display: flex;justify-content: center;" appearance="fill">
+              <mat-label>Enter gmail</mat-label>
+              <input matInput [type]="hide ? 'password' : 'text'">
+
+            </mat-form-field>
+              <br>
+            <mat-form-field style="display: flex;justify-content: center;" appearance="fill">
+              <mat-label>Enter full name</mat-label>
+              <input matInput [type]="hide ? 'password' : 'text'">
+
+            </mat-form-field>
+              <br>
+              <mat-form-field style="display: flex;justify-content: center;" appearance="fill">
+                <mat-label>Enterpass word</mat-label>
+                <input matInput [type]="hide ? 'password' : 'text'">
+                <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+                <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                </button>
+              </mat-form-field>
+              <br>
+              <h1 style="display: flex;justify-content: center; font-size: 14px;">By signing up, you confirm that you've read and accepted our Terms of Service and Privacy Policy.</h1>
+              <br>
+
+              <mat-card-actions style="display: flex;justify-content: center;">
+                  <button mat-raised-button  (click)='this.authService.lgin()'
+                      aria-label="Sign-out" color="primary">Sign up</button>
+              </mat-card-actions>
+              <br>
+
+
+          </form>
+      </mat-card-actions>
+
+  </mat-card>
+</p>
