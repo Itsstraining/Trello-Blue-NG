@@ -1,38 +1,120 @@
 <div class="container">
   <mat-toolbar>
-    <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+    <button
+      mat-icon-button
+      class="example-icon"
+      aria-label="Example icon-button with menu icon"
+    >
       <mat-icon>menu_book</mat-icon>
     </button>
     <!-- <span>My App</span> -->
-    <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+    <button
+      mat-icon-button
+      class="example-icon"
+      aria-label="Example icon-button with menu icon"
+    >
       <mat-icon>home</mat-icon>
     </button>
-    <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+    <button
+      mat-icon-button
+      class="example-icon"
+      aria-label="Example icon-button with menu icon"
+    >
       <mat-icon>dashboard</mat-icon>
     </button>
     <mat-form-field class="invisible">
-      <input matInput type="search" class="search-input">
+      <input matInput type="search" class="search-input" />
       <mat-icon>search</mat-icon>
     </mat-form-field>
     <span class="example-spacer"></span>
     <div style="justify-content: center;">
-      <img style="width: 40px"
-        src="../../assets/images/checkmark+clipboard+document+list+tracklist+icon-1320167911544323810.png" alt="">
-     <span style="font-size:40px;"> Pathwork</span>
+      <img
+        style="width: 40px;"
+        src="../../assets/images/checkmark+clipboard+document+list+tracklist+icon-1320167911544323810.png"
+        alt=""
+      />
+      <span style="font-size: 40px;"> Pathwork</span>
     </div>
     <span class="example-spacer"></span>
-    <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+    <button
+      mat-icon-button
+      class="example-icon"
+      aria-label="Example icon-button with menu icon"
+    >
       <mat-icon>add</mat-icon>
     </button>
-    <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+    <button
+      mat-icon-button
+      class="example-icon"
+      aria-label="Example icon-button with share icon"
+    >
       <mat-icon>info</mat-icon>
     </button>
-    <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+    <button
+      mat-icon-button
+      class="example-icon"
+      aria-label="Example icon-button with share icon"
+    >
       <mat-icon>notifications</mat-icon>
     </button>
-    <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+    <button
+      mat-icon-button
+      class="example-icon"
+      aria-label="Example icon-button with share icon"
+    >
       <mat-icon>person_pin</mat-icon>
     </button>
-
   </mat-toolbar>
 </div>
+
+<mat-grid-list cols="2" rowHeight="1:1" style="margin-top:1%;">
+  <mat-grid-tile>
+    <div style="position: absolute; top: 0px; display: block;">
+      <nav class="innav">
+        <ul class="ulbtn">
+          <li class="libtn"><button class="btnstyle"><mat-icon style="margin-right:8px;">dashboard</mat-icon>Bảng</button></li>
+          <li class="libtn"><button class="btnstyle"><mat-icon style="margin-right:8px;">developer_board</mat-icon>Mẫu</button></li>
+          <li class="libtn"><button class="btnstyle"><mat-icon style="margin-right:8px;">home</mat-icon>Home page</button></li>
+        </ul>
+      </nav>
+    </div>
+  </mat-grid-tile>
+  <mat-grid-tile>
+    <div style="position: absolute; top: 0px; display: block; left: 0px;">
+      <div>
+        <mat-icon class="icon">access_time</mat-icon>
+        <h2 class="font">Đã xem gần đây</h2>
+      </div>
+      <div>
+        <ul class="ultable">
+          <li class="inli">
+            <button style="padding: 8px;" class="board-img"><a></a></button>
+          </li>
+          <li class="inli">
+            <button style="padding: 8px;" class="board-img"><a></a></button>
+          </li>
+          <li class="inli">
+            <button style="padding: 8px;" class="board-img"><a></a></button>
+          </li>
+        </ul>
+      </div>
+      <div>
+        <mat-icon class="icon">person</mat-icon>
+        <h3 class="font">Bảng Cá Nhân</h3>
+      </div>
+      <div>
+        <ul class="ultable">
+          <li class="inli">
+            <button style="padding: 8px;" class="board-img"><a></a></button>
+          </li>
+          <li class="inli">
+            <button style="padding: 8px;" class="board-img"><a></a></button>
+          </li>
+          <li class="inli">
+            <button style="padding: 8px;" class="board-img"><a></a></button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </mat-grid-tile>
+</mat-grid-list>
