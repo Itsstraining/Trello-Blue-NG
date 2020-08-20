@@ -2,8 +2,8 @@
 <div class="box">
     <div *ngFor="let it of dashDB ">
         <div class="container dash-box right-m ">
-            <div class="add-box box1 ">{{it.boxName}}</div>
-            <app-dash-box></app-dash-box>
+            <div class="add-box box1 " style="font-weight: 700;">{{it.boxName.trim().toUpperCase()}}</div>
+            <app-dash-box [dbtam]="it.content"></app-dash-box>
         </div>
     </div>
     <!-- Ô Input -->
@@ -13,7 +13,7 @@
     <div *ngIf="!toggleIpt">
         <div class="container dash-box right-m">
             <div class="ipt-con ">
-                <input class="add-box box1 ipt " placeholder="Write your task here " [(ngModel)]="dboxName ">
+                <input class="add-box box1 ipt " placeholder="Write your task name here " [(ngModel)]="dboxName">
             </div>
             <div class="dash-box box3 ">
                 <div class="dash-box box-con ">

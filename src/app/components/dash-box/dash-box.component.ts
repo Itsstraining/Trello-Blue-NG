@@ -1,29 +1,28 @@
-import { Component, OnInit } from '@angular/core';
-import { DashBoardServicesService } from 'src/app/services/dash-board-services.service';
-import {DashListItem, DashBox} from '../../models/dash-item.model'
+import { Component, OnInit, Input } from '@angular/core';
+import {CdkDragDrop, moveItemInArray, transferArrayItem} from '@angular/cdk/drag-drop';
 @Component({
   selector: 'app-dash-box',
   templateUrl: './dash-box.component.html',
   styleUrls: ['./dash-box.component.scss']
 })
 export class DashBoxComponent implements OnInit {
-  boxname ='';
-  public dbtam : Array<DashListItem> = [];
-  // public dashDB :Array<DashBox> =[]
-  // constructor(public dboardService : DashBoardServicesService) { 
-  //   this.dashDB = this.dboardService.dashBoxDB;
-  // }
+  @Input() public dbtam : Array<string>=[];
   pushdtb(n:string){
-    this.dbtam.push({noidung:n});
+    this.dbtam.push(n);
+  }g
+  constructor(){
   }
-
   ngOnInit(): void {
   }
-  // newBox(){
-  //   this.dboardService.dashBoxDB.push({
-  //     boxName:this.boxname,
-  //     dashBox:this.dbtam,
-  //   });
-  //   console.log(this.dboardService.dashBoxDB);
-  // }
+
+  drop(event: CdkDragDrop<string[]>) {
+    if (event.previousContainer === event.container) {
+      moveItemInArray(event.container.data, event.previousIndex, event.currentIndex);
+    } else {
+      transferArrayItem(event.previousContainer.data,
+                        event.container.data,
+                        event.previousIndex,
+                        event.currentIndex);
+    }
+  }
 }

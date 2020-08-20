@@ -1,8 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { DashBoardServicesService } from 'src/app/services/dash-board-services.service';
-import {DashListItem, DashBox} from '../../models/dash-item.model'
-
-
+import { DashBox} from '../../models/dash-item.model'
 @Component({
   selector: 'app-dash-page',
   templateUrl: './dash-page.component.html',
@@ -10,21 +8,21 @@ import {DashListItem, DashBox} from '../../models/dash-item.model'
 })
 export class DashPageComponent implements OnInit {
   dboxName = '';
-  toggleIpt =true;
+  toggleIpt = true;
   public dashDB :Array<DashBox> =[]
   constructor(public dboardService : DashBoardServicesService) { 
-    this.dashDB = this.dboardService.dashBoxDB;
+    this.dashDB = this.dboardService.db;
   }
   ngOnInit(): void {
   }
   newBox(){
-    if (this.dboxName=='')
+    if (this.dboxName.trim()=='')
       alert("Please enter your task name.")
     else{  
       this.toggle();
-      this.dboardService.dashBoxDB.push({
+      this.dboardService.db.push({
       boxName:this.dboxName,
-      dashBox:[],
+      content:[],
     });
   }
     this.dboxName='';
@@ -33,6 +31,4 @@ export class DashPageComponent implements OnInit {
   toggle(){
     this.toggleIpt= !this.toggleIpt
   }
-
-
 }
