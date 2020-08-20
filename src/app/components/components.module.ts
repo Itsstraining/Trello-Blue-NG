@@ -5,12 +5,14 @@ import {DashBoxItemComponent} from './dash-box-item/dash-box-item.component';
 import {DashBoxComponent} from './dash-box/dash-box.component';
 import { FormsModule } from '@angular/forms';
 import { DashPageComponent } from './dash-page/dash-page.component';
+import { DashBoardContentComponent } from './dash-board-content/dash-board-content.component';
 
 @NgModule({
   declarations: [
     DashBoxComponent,
     DashBoxItemComponent,
     DashPageComponent,
+    DashBoardContentComponent,
   ],
   imports: [
     CommonModule,

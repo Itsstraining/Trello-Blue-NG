@@ -1,6 +1,4 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
-import { DashBoardServicesService } from 'src/app/services/dash-board-services.service';
-import{DashListItem} from '../../models/dash-item.model';
 @Component({
   selector: 'app-dash-box-item',
   templateUrl: './dash-box-item.component.html',
@@ -8,7 +6,7 @@ import{DashListItem} from '../../models/dash-item.model';
 })
 export class DashBoxItemComponent implements OnInit {
   txtBox:string ='';
-  constructor(public dboardServiec :DashBoardServicesService) {}
+  constructor() {}
   display1:Boolean = true;
   display2:Boolean = false;
 
@@ -22,7 +20,11 @@ export class DashBoxItemComponent implements OnInit {
   @Output() onAddEvent = new EventEmitter<string>();
   outputContent(n:string){
     this.toggle();
+    if(n=='')
+    return null;
+    else
     this.onAddEvent.emit(n);
+
   }
 
   clearVaulue(){
