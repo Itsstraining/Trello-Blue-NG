@@ -10,14 +10,15 @@
 
             </mat-form-field>
               <br>
-            <mat-form-field style="display: flex;justify-content: center;" appearance="fill">
-              <mat-label>Enter full name</mat-label>
-              <input matInput [type]="hide ? 'password' : 'text'">
+              <mat-form-field style="display: flex;justify-content: center;" appearance="fill">
+                <mat-label>Enter password</mat-label>
+                <input matInput [type]="hide ? 'password' : 'text'">
 
-            </mat-form-field>
+              </mat-form-field>
+              <br>
               <br>
               <mat-form-field style="display: flex;justify-content: center;" appearance="fill">
-                <mat-label>Enterpass word</mat-label>
+                <mat-label>Import password</mat-label>
                 <input matInput [type]="hide ? 'password' : 'text'">
                 <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
                 <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
@@ -32,6 +33,12 @@
                       aria-label="Sign-out" color="primary">Sign up</button>
               </mat-card-actions>
               <br>
+            <h1 style="display: flex;justify-content: center;">OR</h1>
+            <br>
+            <mat-card-actions style="display: flex;justify-content: center;">
+              <button mat-raised-button  (click)='this.authService.lgin()'
+                  aria-label="Sign-in" color="primary"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/753px-Google_%22G%22_Logo.svg.png" width="20px" height="20px"> Tiếp tục với Google</button>
+            </mat-card-actions>
 
 
           </form>
