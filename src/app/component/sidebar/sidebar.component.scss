@@ -28,9 +28,12 @@
   font-weight: 400;
   position: relative;
   white-space: nowrap;
+  font-size: large;
+  font-weight: bold;
 }
 
 .board-img{
+  color: black;
   border-radius: 3px;
   display: block;
   border: none;
@@ -42,7 +45,7 @@
   background-position-y: center;
   cursor: pointer;
   background-color: rgb(75, 191, 107);
-  width: 148.887px;
+  width: 170px;
   height: 100px;
   line-height: 20px;
   opacity: 1;
@@ -117,4 +120,11 @@
 
 .inli{
   padding: 5px;
+}
+
+.wordintable{
+  position: absolute;
+  text-align: left;
+  top: 5px;
+  left: 5px;
 }
