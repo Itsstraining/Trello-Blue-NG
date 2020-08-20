@@ -8,13 +8,13 @@ const routes: Routes = [{ path: 'dashboard', loadChildren: () => import('./pages
 {
   path:"board",
   component: DashPageComponent,
-  
+
 },
 {
   path:"home",
   component: HomeComponent
 },
-{}
+// {}
 // {
 //   path:"login",
 //   component: L
