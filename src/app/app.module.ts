@@ -9,11 +9,13 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { UiModule } from './modules/ui/ui.module';
 import { Navbar1Component } from './navbar1/navbar1.component';
 import { HomeComponent } from './home/home.component';
+import { SidebarComponent } from './component/sidebar/sidebar.component';
 @NgModule({
   declarations: [
     AppComponent,
     Navbar1Component,
-    HomeComponent
+    HomeComponent,
+    SidebarComponent
   ],
   imports: [
     BrowserModule,
