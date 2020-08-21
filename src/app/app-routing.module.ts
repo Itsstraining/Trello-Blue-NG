@@ -4,6 +4,7 @@ import { LoginComponent } from './pages/login/login.component';
 import { RegistrationComponent } from './pages/registration/registration.component';
 import { DashPageComponent } from './components/dash-page/dash-page.component';
 import { HomeComponent } from './pages/home/home.component';
+import { SidebarComponent } from './components/sidebar/sidebar.component';
 
 const routes: Routes = [
   {
@@ -33,11 +34,10 @@ const routes: Routes = [
     path: 'registration',
     component: RegistrationComponent,
   },
-  // {}
-  // {
-  //   path:"login",
-  //   component: L
-  // },
+  {
+    path:"menu",
+    component: SidebarComponent,
+  },
   // {
   //   path:"board",
   //   component: DashPageComponent,
