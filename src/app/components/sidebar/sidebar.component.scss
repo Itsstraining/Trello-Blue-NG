@@ -1,18 +1,17 @@
-.example-spacer {
-  flex:  auto;
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 20px;
+ul{
+  padding: 0;
+  margin: 0;
 }
 
-.example-container {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
+li{
+  list-style-type: none;
 }
 
+
+.ulbtn>h2,.ulbtn .btnstyle{
+  padding-left: 30px;
+  box-sizing: border-box;
+}
 .icon{
     height: 32px;
     line-height: 32px;
@@ -33,7 +32,6 @@
 }
 
 .board-img{
-  color: black;
   border-radius: 3px;
   display: block;
   border: none;
@@ -44,9 +42,9 @@
   background-position-x: 50%;
   background-position-y: center;
   cursor: pointer;
-  background-color: rgb(75, 191, 107);
-  width: 170px;
-  height: 100px;
+  background-color: rgb(93, 188, 210);
+  width: 200px;
+  height: 130px;
   line-height: 20px;
   opacity: 1;
   transition: 0.3s;
@@ -62,12 +60,8 @@
   list-style: none;
   margin: 0;
   padding: 0;
-  display: block;
-  margin-block-start: 1em;
-  margin-block-end: 1em;
-  margin-inline-start: 0px;
-  margin-inline-end: 0px;
-  padding-inline-start: 40px;
+  margin-top: 30px;
+  // display: block;
 }
 
 .innav{
@@ -79,7 +73,6 @@
 .libtn{
   margin-bottom: 4px;
   display: list-item;
-  text-align: -webkit-match-parent;
 }
 
 .btnstyle{
@@ -96,7 +89,7 @@
   overflow: hidden;
   padding: 6px 8px 6px 0;
   text-decoration: none;
-  width: 150%;
+  width: 100%;
   font-size: large;
 }
 
@@ -108,12 +101,6 @@
 .ultable{
   display: flex;
   flex-wrap: wrap;
-  margin-block-start: 1em;
-  margin-block-end: 1em;
-  margin-inline-start: 0px;
-  margin-inline-end: 0px;
-  padding-inline-start: 40px;
-  list-style: none;
   align-content: center;
   justify-content: space-evenly;
 }
@@ -122,9 +109,53 @@
   padding: 5px;
 }
 
+
+
+.newboard{
+  border-radius: 3px;
+  display: block;
+  border: none;
+  position: relative;
+  text-decoration: none;
+  background-size: cover;
+  background-position: 50%;
+  background-position-x: 50%;
+  background-position-y: center;
+  cursor: pointer;
+  background-color: #97a0af;
+  width: 200px;
+  height: 130px;
+  line-height: 20px;
+  opacity: 1;
+  transition: 0.3s;
+}
+
+.newboard:hover{
+  opacity: 0.5;
+}
+
+.newboardword{
+  top: 5px;
+  left: 5px;
+  color: white;
+  font-size: large;
+  font-weight: 700;
+}
+
+
 .wordintable{
   position: absolute;
   text-align: left;
   top: 5px;
   left: 5px;
+  color: white;
+  font-size: large;
+  font-weight: 700;
 }
+
+#cont{
+  display: flex;
+  flex-direction: row;
+}
+
+
