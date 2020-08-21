@@ -6,7 +6,7 @@ import {AuthService} from '../../services/auth.service';
   styleUrls: ['./login.component.scss']
 })
 export class LoginComponent implements OnInit {
-  hide = true;
+  hide=true;
   constructor(public authService: AuthService) { }
 
   ngOnInit(): void {
