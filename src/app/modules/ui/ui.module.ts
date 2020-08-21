@@ -36,6 +36,7 @@ import {MatTooltipModule} from '@angular/material/tooltip';
 import {MatTreeModule} from '@angular/material/tree';
 import {OverlayModule} from '@angular/cdk/overlay';
 import {DragDropModule} from '@angular/cdk/drag-drop';
+import { BrowserModule } from '@angular/platform-browser';
 
 
 
@@ -81,6 +82,7 @@ const MarterialIU=[
   declarations: [],
   imports: [
     CommonModule,
+    BrowserModule,
     MarterialIU
   ],
   exports: [MarterialIU]
