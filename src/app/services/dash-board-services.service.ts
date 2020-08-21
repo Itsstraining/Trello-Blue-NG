@@ -1,13 +1,15 @@
 import { Injectable } from '@angular/core';
-import { DashBox} from '../models/dash-item.model'
+import { DashBox } from '../models/dash-item.model';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class DashBoardServicesService {
-  db : Array<DashBox> =[{
-    boxName: 'Shopping',
-    content:['buy fish','buy vegestable']
-     }];
-  constructor() { }
+  db: Array<DashBox> = [
+    {
+      boxName: 'Shopping',
+      content: ['buy fish', 'buy vegestable'],
+    },
+  ];
+  constructor() {}
 }

@@ -6,6 +6,9 @@ import {DashBoxComponent} from './dash-box/dash-box.component';
 import { FormsModule } from '@angular/forms';
 import { DashPageComponent } from './dash-page/dash-page.component';
 import { DashBoardContentComponent } from './dash-board-content/dash-board-content.component';
+import { NavbarComponent } from './navbar/navbar.component';
+import { Navbar1Component } from './navbar1/navbar1.component';
+import { SidebarComponent } from './sidebar/sidebar.component';
 
 @NgModule({
   declarations: [
@@ -13,16 +16,22 @@ import { DashBoardContentComponent } from './dash-board-content/dash-board-conte
     DashBoxItemComponent,
     DashPageComponent,
     DashBoardContentComponent,
+    NavbarComponent,
+    Navbar1Component,
+    SidebarComponent
   ],
   imports: [
     CommonModule,
     UiModule,
-    FormsModule    
+    FormsModule
   ],
-  exports:[
+  exports: [
     DashBoxComponent,
     DashBoxItemComponent,
-    DashPageComponent
+    DashPageComponent,
+    NavbarComponent,
+    Navbar1Component,
+    SidebarComponent
   ]
 })
 export class ComponentsModule { }

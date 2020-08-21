@@ -1,4 +1,3 @@
-import { UiModule } from './../modules/ui/ui.module';
 import { Component, OnInit } from '@angular/core';
 
 @Component({

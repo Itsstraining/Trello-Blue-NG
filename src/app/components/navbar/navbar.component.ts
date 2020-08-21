@@ -3,19 +3,16 @@ import { Router } from '@angular/router';
 @Component({
   selector: 'app-navbar',
   templateUrl: './navbar.component.html',
-  styleUrls: ['./navbar.component.scss']
+  styleUrls: ['./navbar.component.scss'],
 })
 export class NavbarComponent implements OnInit {
+  constructor(private router: Router) {}
 
-  constructor(private router: Router) { }
-
-  ngOnInit(): void {
+  ngOnInit(): void {}
+  public one() {
+    this.router.navigate(['/login']);
   }
-  public one(){
-    this.router.navigate(['/login'])
+  public two() {
+    this.router.navigate(['/registration']);
   }
-  public two(){
-    this.router.navigate(['/registration'])
-  }
-
 }
