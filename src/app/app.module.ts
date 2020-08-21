@@ -22,18 +22,28 @@ import { MatCardModule } from '@angular/material/card';
 import { environment } from 'src/environments/environment';
 import { AuthService } from './service/auth.service';
 import { NavbarComponent } from './navbar/navbar/navbar.component';
+import { CommonModule } from '@angular/common';
+import { LoginComponent } from './login/login/login.component';
+import { RegistrationComponent } from './registration/registration/registration.component';
 @NgModule({
   declarations: [
     AppComponent,
     Navbar1Component,
     HomeComponent,
     SidebarComponent,
-    NavbarComponent
+    NavbarComponent,
+    LoginComponent,
+    RegistrationComponent,
   ],
   imports: [
+    CommonModule,
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFirestoreModule,
+    AngularFireAuthModule,
+    AngularFireStorageModule,
     UiModule,
     MatToolbarModule,
     MatFormFieldModule,
@@ -43,10 +53,6 @@ import { NavbarComponent } from './navbar/navbar/navbar.component';
     MatStepperModule,
     MatSliderModule,
     MatCardModule,
-    AngularFireModule.initializeApp(environment.firebase),
-    AngularFirestoreModule,
-    AngularFireAuthModule,
-    AngularFireStorageModule
 
 
 
