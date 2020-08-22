@@ -8,25 +8,23 @@
             <br>
             <mat-form-field style="display: flex;justify-content: center" appearance="fill">
               <mat-label style="width: 200px">Nhập email</mat-label>
-              <input matInput [type]="hide ? 'password' : 'text'">
+              <input matInput>
 
             </mat-form-field >
               <br>
-              <mat-form-field style=" display:flex; justify-content: center" appearance="fill">
-                <mat-label >Nhập mật khẩu</mat-label>
-                <input matInput [type]="hide ? 'password' : 'text'">
-                <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
-                <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
-                </button>
-              </mat-form-field>
+              <mat-form-field style="display: flex;justify-content: center; margin-bottom: 2px" appearance="fill">
+                <mat-label style="width: 200px">Nhập mật khẩu</mat-label>
+                <input matInput>
               <br>
+              </mat-form-field >
 
-              <mat-card-actions style="display: flex;justify-content: center;">
+
+              <mat-card-actions style="display: flex;justify-content: center; margin-bottom: 2px">
                   <button mat-raised-button  (click)='this.authService.lgin()'
                       aria-label="Sign-in" color="primary">Đăng nhập</button>
               </mat-card-actions>
               <br>
-              <h1 style="display: flex;justify-content: center;">OR</h1>
+              <h1 style="display: flex;justify-content: center; margin-bottom: 2px;">OR</h1>
               <br>
               <mat-card-actions style="display: flex;justify-content: center;">
                 <button mat-raised-button  (click)='this.authService.lgin()'
