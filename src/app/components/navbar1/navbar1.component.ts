@@ -8,13 +8,15 @@ import { Router } from '@angular/router';
 })
 export class Navbar1Component implements OnInit {
 
-  constructor(private router: Router) { }
-
-  gotomenu(){
-    this.router.navigate(['menu']);
-  }
+  constructor(
+    private router: Router
+  ) { }
 
   ngOnInit(): void {
+  }
+
+  gotoSth(name: string) {
+    this.router.navigate([`${name}`]);
   }
 
 }

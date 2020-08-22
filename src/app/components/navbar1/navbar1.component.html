@@ -1,9 +1,9 @@
 <mat-toolbar>
     <div>
-        <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+        <button (click)="gotoSth('home')" mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
     <mat-icon>home</mat-icon>
   </button>
-        <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon" (click)="gotomenu()">
+        <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon" (click)="gotoSth('menu')">
     <mat-icon>dashboard</mat-icon>
   </button>
     </div>
@@ -13,7 +13,7 @@
       Pathwork
     </span>
     <div>
-        <button mat-stroked-button>Login</button>
-        <button class="btn" mat-stroked-button>Register</button>
+        <button mat-stroked-button (click)="gotoSth('login')">Login</button>
+        <button class="btn" mat-stroked-button (click)="gotoSth('registration')">Register</button>
     </div>
 </mat-toolbar>
