@@ -16,6 +16,7 @@ import { LoginComponent } from './pages/login/login.component';
 import { RegistrationComponent } from './pages/registration/registration.component';
 import { DashBoardServicesService } from './services/dash-board-services.service';
 import { ComponentsModule } from './components/components.module';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { ComponentsModule } from './components/components.module';
     AngularFireAuthModule,
     AngularFireStorageModule,
     UiModule,
-    ComponentsModule
+    ComponentsModule,
+    ReactiveFormsModule
   ],
   providers: [
     AuthService,

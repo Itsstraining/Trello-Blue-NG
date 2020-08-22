@@ -10,8 +10,17 @@ export class DashBoardContentComponent implements OnInit {
   constructor() { }
   toggleDisplay =true;
   toggleInput = false;
-toggleCheckBox= false;
+  toggleCheckBox= false;
+  classA="add-box box1";
   ngOnInit(): void {
+  }
+  checkBtn=true;
+  isChecked(){
+    if(this.checkBtn)
+    this.classA="add-box box1 done";  
+    else
+    this.classA ="add-box box1";
+    this.checkBtn=! this.checkBtn
   }
 
   toggle(){
@@ -28,12 +37,7 @@ toggleCheckBox= false;
     else
     this.content=this.content;
   }
-  classA="add-box box1";
-  classB="add-box box1 done"
 
-  doneClick(){
-    this.classA=this.classB;
-  }
-
+ 
 }
 
