@@ -38,14 +38,6 @@ const routes: Routes = [
     path:"menu",
     component: SidebarComponent,
   },
-  // {
-  //   path:"board",
-  //   component: DashPageComponent,
-  // },
-  // {
-  //   path:"board",
-  //   component: DashPageComponent,
-  // }
 ];
 
 @NgModule({
