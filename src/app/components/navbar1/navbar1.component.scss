@@ -1,13 +1,22 @@
 .example-spacer {
-  flex: auto;
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 20px;
+    flex: 1 1 auto;
 }
-.container {
-  box-sizing: border-box;
-  display: block;
-  max-height: 70px;
-  overflow: hidden;
-  padding: 4px;
+
+#logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    font-weight: 700;
+    color: #52b1b1;
+    font-style: italic;
+}
+
+mat-toolbar {
+    display: flex;
+    justify-content: space-between;
+}
+
+.btn {
+    margin-left: 10px;
 }

@@ -1,54 +1,31 @@
-.example-spacer {
-  flex: 1 1 auto;
-}
-.example-card {
-  // max-width: 1700px;
-  width: 85%;
-  align-items: flex-end;
-  display:-webkit-box;
-
-  font-size: x-large;
-  line-height: 1.2;
-  margin: inherit;
-
+h1 {
+    font-size: xxx-large;
+    line-height: 1.6;
 }
 
-.example-card1 {
-  max-width: 1000px;
-  align-items: flex-end;
-  display:-webkit-box;
-  line-height: 2.2;
-  font-size: x-large;
-
+p {
+    font-size: x-large;
+    font-weight: 300;
 }
 
-
-.example-card2 {
-  max-width: 1000px;
-  align-items: flex-end;
-  display:-webkit-box;
-  line-height: 2.2;
-  font-size: x-large;
-
-
+.container {
+    display: flex;
+    justify-content: center;
+    background-color: skyblue;
 }
 
-.example-card3 {
-  max-width: 1000px;
-  align-items: flex-end;
-  display:-webkit-box;
-  line-height: 2.2;
-  font-size: x-large;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  align-content: center;
-  flex-direction: row;
-
+.paging {
+    width: 1200px;
+    height: 500px;
+    display: flex;
+    justify-content: left;
 }
-.container{
-  align-items: center;
-  justify-content: center;
-  flex-direction: row;
-  box-sizing: border-box;
+
+.content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: justify;
+    padding-right: 5%;
 }
